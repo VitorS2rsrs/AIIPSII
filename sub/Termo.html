@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E o Termo meu?</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        .ana {
+            border-radius: 10px;
+            border-width: 3px;
+            width: 60px;
+            height: 60px;
+            border-style: solid;
+            border-color: rgb(177, 164, 51);
+            background-color: rgb(126, 123, 42);
+        }
+
+        .anaJulia {
+            border-radius: 10px;
+            border-width: 3px;
+            width: 60px;
+            height: 60px;
+            border-style: solid;
+            border-color: rgba(32, 32, 32, 0.897);
+            background-color: rgba(43, 43, 43, 0.63);
+        }
+
+        .ana:hover {
+            top: -10px;
+            box-shadow: 0 2px 2px rgb(49, 59, 59)
+        }
+
+        .miguel {
+            border-radius: 10px;
+            width: 200px;
+            height: 40px;
+            border-style: solid;
+            border-color: rgb(153, 153, 153);
+            background-color: rgb(36, 78, 92);
+            text-align: center;
+        }
+        .miguel::placeholder{
+            color: rgb(172, 172, 172);
+        }
+    </style>
+</head>
+<div class="container-fluid">
+    <div class="row">
+        <div style="background-color: rgb(88, 71, 47);" class="col-md-3">
+        </div>
+        <div style="background-color: rgb(117, 97, 54);" class="col-md-6">
+            <center>
+                <br> <br> 
+                <h1 class="text-center">
+                    😴 Joguinho trilegal 😴
+                </h1>
+                <br>
+                <input class="miguel" type="text" placeholder="Digite uma palavra!">
+            </center>
+        </div>
+        <div style="background-color: rgb(88, 71, 47);" class="col-md-3">
+        </div>
+    </div>
+    <div class="row">
+        <div style="background-color: rgb(88, 71, 47);" class="col-md-3">
+        </div>
+
+
+        <div style="background-color: rgb(117, 97, 54)" class="col-md-6">
+            <center>
+                <br>
+                <input class="ana">
+                <input class="ana">
+                <input class="ana">
+                <input class="ana">
+                <input class="ana">
+                <h6></h6>
+                <input id="a" class="anaJulia">
+                <input id="b" class="anaJulia">
+                <input id="c" class="anaJulia">
+                <input id="d" class="anaJulia">
+                <input id="e" class="anaJulia">
+                <h6></h6>
+                <input id="a1" class="anaJulia">
+                <input id="b1" class="anaJulia">
+                <input id="c1" class="anaJulia">
+                <input id="d1" class="anaJulia">
+                <input id="e1" class="anaJulia">
+                <h6></h6>
+                <input id="a2" class="anaJulia">
+                <input id="b2" class="anaJulia">
+                <input id="c2" class="anaJulia">
+                <input id="d2" class="anaJulia">
+                <input id="e2" class="anaJulia">
+                <h6></h6>
+                <input id="a3" class="anaJulia">
+                <input id="b3" class="anaJulia">
+                <input id="c3" class="anaJulia">
+                <input id="d3" class="anaJulia">
+                <input id="e3" class="anaJulia">
+                <h6></h6>
+                <input id="a4" class="anaJulia">
+                <input id="b4" class="anaJulia">
+                <input id="c4" class="anaJulia">
+                <input id="d4" class="anaJulia">
+                <input id="e4" class="anaJulia">
+                <br> <br> <br>
+            </center>
+        </div>
+
+
+        <div style="background-color: rgb(88, 71, 47);" class="col-md-3">
+        </div>
+    </div>
+</div>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+
+    bloqueiaBotao()
+    function bloqueiaBotao(){
+        document.getElementById("a").disabled = true
+        document.getElementById("b").disabled = true
+        document.getElementById("c").disabled = true
+        document.getElementById("d").disabled = true
+        document.getElementById("e").disabled = true
+
+        document.getElementById("a1").disabled = true
+        document.getElementById("b1").disabled = true
+        document.getElementById("c1").disabled = true
+        document.getElementById("d1").disabled = true
+        document.getElementById("e1").disabled = true
+
+        document.getElementById("a2").disabled = true
+        document.getElementById("b2").disabled = true
+        document.getElementById("c2").disabled = true
+        document.getElementById("d2").disabled = true
+        document.getElementById("e2").disabled = true
+
+        document.getElementById("a3").disabled = true
+        document.getElementById("b3").disabled = true
+        document.getElementById("c3").disabled = true
+        document.getElementById("d3").disabled = true
+        document.getElementById("e3").disabled = true
+
+        document.getElementById("a4").disabled = true
+        document.getElementById("b4").disabled = true
+        document.getElementById("c4").disabled = true
+        document.getElementById("d4").disabled = true
+        document.getElementById("e4").disabled = true
+    }
+
+</script>

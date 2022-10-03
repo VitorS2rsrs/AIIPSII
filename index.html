@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Circuitos </title>
+
+</head>
+<body>
+    
+<center>
+
+    <h1>O que deseja calcular</h1>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <input onclick="opp()" class="radio" id="i" type="radio" name="escolha"> Intensidade da corrente </input> <br>
+    <input onclick="opp()" class="radio" id="q" type="radio" name="escolha"> Carga Elétrica </input> <br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <input onclick="opp()" class="radio" id="t" type="radio" name="escolha"> Intervalo de tempo </input> <br> <br><br>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+    <input id="valor1" type="number">&nbsp;&nbsp; 
+    <input id="valor2" type="number"> <br><br>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+    <button onclick="esfor()"> Calcular </button>  &nbsp;&nbsp; <button onclick="limpar()"> limpar </button> <br><br>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+    <h3 id="resultado" style="font-size:25px ;"></h3>
+
+</center>
+
+
+</body>
+</html>
+
+<script>
+    let formula
+function opp(){
+    var i = document.getElementById("i")
+    var q = document.getElementById("q")
+    var t = document.getElementById("t")
+
+        if(i.checked){
+            formula = 1
+            document.getElementById("valor1").placeholder = "Carga Elétrica"
+            document.getElementById("valor2").placeholder = "Intervalo de tempo"
+
+        }
+        else if(q.checked){
+            formula = 2
+            document.getElementById("valor1").placeholder = "Intensidade da corrente"
+            document.getElementById("valor2").placeholder = "Intervalo de tempo"
+
+        }
+        else if(t.checked){
+            formula = 3
+            document.getElementById("valor1").placeholder = "Intensidade da corrente"
+            document.getElementById("valor2").placeholder = "Carga Elétrica"
+
+        }
+    }
+    function esfor(){
+        var a = Number(document.getElementById("valor1").value)
+        var b = Number(document.getElementById("valor2").value)
+        if(formula == 1){
+            document.getElementById("resultado").innerHTML = for1(a,b)
+        }
+        else if(formula == 2){    
+            document.getElementById("resultado").innerHTML = for1(a,b)
+        
+        }
+        else if(formula == 3){
+            document.getElementById("resultado").innerHTML = for1(a,b)
+        }
+        else{
+            document.getElementById("resultado").innerHTML = "Você precisa selecionar uma das opções!"
+        }
+    }
+    function for1(a,b){
+        var i = a/b
+        return i 
+    }
+    function for2(a,b){
+        var q = a*b
+        return q
+    }
+    function for3(a,b){
+        var t = b/a
+        return t
+    }
+function limpar(){
+    document.getElementById("valor1").value = null
+    document.getElementById("valor2").value = null
+    document.getElementById("resultado").innerHTML = null
+    i.checked = false
+    q.checked = false
+    t.checked = false
+    formula = 0 
+}
+</script>

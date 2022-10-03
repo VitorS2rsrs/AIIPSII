@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula média</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <style>
+            input::placeholder{
+                color: black;
+            }
+        </style>
+</head>
+
+<body>
+    <center>
+        <br> <br> <br> <br>
+        <h1> 🎰 Calcula média de provas 🎰</h1>
+        <br> <br>
+        <input style="text-align:center ;" id="nome" class="btn btn-outline-secondary" type="text" placeholder="Digite seu nome!">
+        <br> <br> <br>
+        <input style="text-align:center ;" id="1" class="btn btn-outline-secondary" type="number" placeholder="1º Nota"> <br> <br>
+        <input style="text-align:center ;" id="2" class="btn btn-outline-secondary" type="number" placeholder="2º Nota"> <br> <br>
+        <input style="text-align:center ;" id="3" class="btn btn-outline-secondary" type="number" placeholder="3º Nota"> <br> <br> <br>
+        <button onclick="calc()" type="button" class="btn btn-secondary">
+            Calcular
+        </button>
+        <br> <br>
+        <h4 id="resposta"></h4>
+    </center>
+</body>
+
+</html>
+
+<script>
+    function calc() {
+        var nome = document.getElementById("nome").value
+        var nota1 = Number(document.getElementById("1").value)
+        var nota2 = Number(document.getElementById("2").value)
+        var nota3 = Number(document.getElementById("3").value)
+        var soma = nota1 + nota2 + nota3
+        var media = soma / 3
+        document.getElementById("resposta").innerHTML = "A média de " + nome + " é " + media + "."
+    }
+</script>
